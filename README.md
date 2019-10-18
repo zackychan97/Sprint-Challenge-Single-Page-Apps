@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: have you ever been on a website and clicked on something and you notice a white screen before everything loads? Well we get rid of that by using client side routing. How it gets rid of it is by loading the whole page initially. So instead of waiting to load something when you click on it, it is already loaded. Obviously you would want to decide what you want to use based on how much you would have to load. So if you have an absolute unit of a website, it probably would not be efficient to make people load the entire website using client side routing, this could be a terrible user experience and even more terrible with slow internet speeds and slow computing power.
 
 ## Project Set Up
 
