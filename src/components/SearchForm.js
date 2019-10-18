@@ -1,35 +1,39 @@
 import React, { useState } from "react";
-import CharacterList from './CharacterList';
+// import CharacterList from './CharacterList';
 
 const Search = (props) => {
-  const [searchValue, setSearchValue]=useState('');
-  const [searchResults, setSearchResults]=useState([]);
+  // const [searchValue, setSearchValue]=useState('');
+  // const [searchResults, setSearchResults]=useState([]);
 
-  const handleSearchInputChanges = (e) => {
-    setSearchValue(e.target.value);
-  }
+  // const handleSearchInputChanges = (e) => {
+  //   setSearchValue(e.target.value);
+  // }
 
-  const resetInputField = () => {
-    setSearchValue("")
-  }
+  // const resetInputField = () => {
+  //   setSearchValue("")
+  // }
 
-  const callSearchFunction = (e) => {
-    e.preventDefault();
-    props.search(searchValue);
-    resetInputField();
-  }
+  // const callSearchFunction = (e) => {
+  //   e.preventDefault();
+  //   props.search(searchValue);
+  //   resetInputField();
+  // }
 
   return (
+    <section className="search-form">
+      <form>
+        <input
+          className="search-bar"
+          type="text"
+          // Passing in props so that it can be utulized on the CharacterCard component
+          placeholder={props.placeholder}
+          value={props.value}
+          onChange={props.onChange}
+        />
+      </form>
+    </section>
     
-    <form className="search">
-      <input
-        value={searchValue}
-        onChange={handleSearchInputChanges}
-        type="text"
-      />
-      <input onClick={callSearchFunction} type="submit" value="SEARCH" />
-    </form>
-  )
+  );
 }
 
 
